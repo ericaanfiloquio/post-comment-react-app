@@ -9,7 +9,7 @@ describe('template spec', () => {
       if ($element.text() === 'Test 123') {
         cy.get($element).siblings('header').children('[data-qa="delete-button"]').click()
       }
-    }
+    })
   })
 })
 // Caso de teste:
