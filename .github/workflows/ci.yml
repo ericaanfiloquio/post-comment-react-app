@@ -9,6 +9,8 @@ jobs:
 
             - name: Checkout
               uses: actions/checkout@v4
+              with:
+                submodules: false 
             
             - name: Cypress Test
               uses: cypress-io/github-action@v6
@@ -26,3 +28,5 @@ jobs:
                     cypress/videos
                     cypress/results
                 if-no-files-found: ignore
+
+                # submodules: false -> no chasing submodules
